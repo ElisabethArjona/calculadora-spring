@@ -171,7 +171,7 @@ public class EntradaTecladoService implements IEntradaTecladoService {
         return edad;
     }
 
-    public char continuar() {
+    public boolean continuar() {
         Scanner scanner = new Scanner(System.in);
         char resp = ' ';
         boolean error = false;
@@ -188,7 +188,10 @@ public class EntradaTecladoService implements IEntradaTecladoService {
             }
         } while (resp != 's' && resp != 'n' || error == true);
 
-        return resp;
+        if (resp == 's'){
+            return true;
+        }
+        return false;
     }
 
     public boolean pedirBoolean(String cadena) {

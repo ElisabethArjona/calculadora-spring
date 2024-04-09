@@ -19,7 +19,7 @@ public interface IEntradaTecladoService {
 
     public int pedirEdad(String cadena);
 
-    public char continuar();
+    public boolean continuar();
 
     public boolean pedirBoolean(String cadena);
 }
